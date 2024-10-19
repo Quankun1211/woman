@@ -1,0 +1,262 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  background: #7a66b5;
+  display: flex;
+  position: relative;
+}
+.card {
+  width: 40%;
+  height: 50%;
+  background: #c4d28c;
+  margin: auto;
+  border: 3px dotted #544387;
+  padding: 20px ;
+  display: flex;
+}
+.left-side, .right-side {
+  width: 50%;
+  height: 100%;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.img img {
+  width: 100%;
+}
+.right-side {
+  padding: 10px ;
+}
+.right-side p {
+  text-align: center;
+}
+.list-num {
+  width: 100%;
+  height: 100%;
+}
+.row {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  margin: 10px 0;
+}
+.col {
+  height: 100%;
+  width: calc(100% / 3);
+  padding: 0 10px;
+}
+.num::selection {
+  display: none;
+}
+.num {
+  width: 100%;
+  height: 55px;
+  background: transparent;
+  border: 3px dotted #544387;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.num:active {
+  background: #3b2d66;
+  color: #fff;
+}
+.card.none {
+  display: none;
+}
+.card-text {
+  margin: auto;
+  width: 50%;
+  background: #c4d28c;
+  height: 30%;
+  padding: 20px;
+  align-items: center;
+  border: 3px dotted #544387;
+  display: none;
+}
+.gift {
+  margin: auto;
+  background: #c4d28c;
+  padding: 20px;
+  border: 3px dotted #544387;
+  width: 60%;
+  height: 50%;
+  position: relative;
+  display: none;
+}
+.card-text.active {
+  display: flex;
+}
+.gift.active {
+  display: block;
+}
+.wrap-img{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.card-text {
+  position: relative;
+}
+.card-text-img{
+  width: 80%;
+  border-radius: 50%;
+}
+
+.card-text-mess{
+  flex: 1;
+}
+.wrap-icon-rose{
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+.wrap-icon-rose img {
+  width: 40px;
+}
+
+.fa-backward-step{
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.password {
+  font-weight: 600;
+}
+.password.none, .hide-pass.none {
+  display: none;
+}
+.hide-pass {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.wrap-gift {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.gift-col{
+  width: 30%;
+  height: 100%;
+}
+.gift>h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.flip-box {
+  background: #000;
+  background-color: transparent;
+  width: 100%;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* .flip-box .flip-box-inner {
+  transform: rotateY(180deg);
+} */
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-box-back img {
+  border-radius: 20px;
+}
+.flip-box-front img, .flip-box-back img {
+  width: 100%;
+}
+.btn-gift {
+  position: absolute;
+  width: 140px;
+  height: 60px;
+  background: #c4d28c;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  left: 40%;
+  display: none;
+}
+.btn-gift.active {
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(37, 32, 40, 0.3);
+  display: none;
+}
+.overlay.active {
+  display: flex;
+}
+.overlay-content{
+  width: 40%;
+  height: 20%;
+  background: #7a66b5;
+  border-radius: 10px;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.overlay-content h1 {
+  color: #fff;
+}
+.btn-overlay{
+  float: right;
+  width: 100px;
+  height: 50px;
+  margin-top: 10px;
+  border: 2px dotted #7a66b5;
+  border-radius: 10px;
+  background: #c4d28c;
+  font-size: 16px;
+}
